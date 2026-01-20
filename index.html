@@ -24,39 +24,60 @@
   </head>
   <body class="font-inter">
     <header>
-      <nav class="bg-[#412567] flex justify-between items-center p-5">
-        <div class="text-white text-3xl font-extrabold">
+      <nav
+        class="bg-[#412567] flex justify-between md:justify-around items-center p-5"
+      >
+        <div class="text-white text-5xl font-extrabold">
           Tech<span
             class="h-14 bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent"
             >Wave</span
           >
         </div>
+        <div
+          class="hidden md:block md:flex justify-around items-center text-white font-semibold gap-3.5"
+        >
+          <div>About</div>
+          <div>Episodes</div>
+          <div>Host</div>
+        </div>
         <img
-          class="size-6 w-4 h-4"
+          class="size-6 w-6 h-6 md:hidden"
           src="assets\hamburger-menu.png"
           alt="Menu bar"
         />
+
+        <button
+          class="hidden md:block bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] rounded-3xl p-2.5 text-white"
+        >
+          Subscribe->
+        </button>
       </nav>
       <section
-        class="home h-screen bg-[url('assets/hero-bg.png')] bg-auto bg-center flex flex-col items-center justify-around py-10 px-5"
+        class="home h-screen bg-[url('assets/hero-bg.png')] bg-auto bg-center flex flex-col justify-center items-center md:justify-around py-10 px-5"
       >
         <div
-          class="h-[52vw] w-[52vw] rounded-full bg-[#2A186C] flex justify-around items-center"
+          class="md:h-[23vw] md:w-[23vw] h-[52vw] w-[52vw] rounded-full bg-[#2A186C] flex justify-around items-center relative md:mt-10"
         >
           <div
-            class="h-[50vw] w-[50vw] rounded-full bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] flex justify-around items-center"
+            class="h-[50vw] w-[50vw] md:h-[22vw] md:w-[22vw] rounded-full bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] flex justify-around items-center"
           >
+            <img
+              class="new-notification absolute top-2 right-2 w-[20vw] md:w-[8vw] animate-bounce"
+              src="assets/new.png"
+            />
             <img class="w-[10vw]" src="assets/microphone.png" />
           </div>
         </div>
-        <div class="font-extrabold text-6xl text-white font-inter">
+        <div class="font-extrabold text-7xl text-white font-inter mt-2.5">
           TechWave
         </div>
-        <div class="text-white text-3xl text-center font-inter opacity-60">
+        <div
+          class="text-white text-3xl text-center font-inter opacity-60 mt-2.5"
+        >
           Your daily dose of tech insights, productivity hacks, and personal
           growth
         </div>
-        <div class="flex gap-2">
+        <div class="flex flex-wrap gap-2 mt-3">
           <button
             class="flex items-center gap-1 text-white font-semibold text-xl bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] p-2 rounded-3xl border-0"
           >
@@ -74,20 +95,23 @@
       </section>
     </header>
     <section class="app bg-[#1A0B2E] px-5 py-10">
-      <div class="font-bold text-4xl text-white font-inter text-center">
+      <div class="font-bold text-5xl text-white font-inter text-center">
         About the Podcast
       </div>
       <div
-        class="text-lg font-normal font-inter text-white text-center mt-5 opacity-60 mb-10"
+        class="details-podcast text-lg font-normal font-inter text-white text-center mt-5 opacity-60 mb-10 mx-auto md:max-w-[50vw]"
       >
         TechWave is your go-to podcast for staying ahead in the fast-paced world
         of technology. We break down complex topics into digestible insights,
         explore productivity strategies that actually work, and share stories of
-        personal growth from industry leaders. Join thousands of young
-        professionals and tech enthusiasts who start their day with TechWave.
+        personal growth from industry leaders.<br /><br />
+        Join thousands of young professionals and tech enthusiasts who start
+        their day with TechWave.
       </div>
-      <hr class="text-white font-light" />
-      <div class="grid grid-cols-2 gap-10 mt-10">
+      <hr class="border-gray-700 font-light md:w-[80vw] mx-auto" />
+      <div
+        class="grid grid-cols-2 md:grid-flow-col md:auto-cols-fr gap-10 my-5 py-2.5"
+      >
         <div class="text-center text-white">
           <div class="text-[#00FF88] text-[40px] font-extrabold">150K+</div>
           <div
@@ -123,219 +147,237 @@
       </div>
     </section>
 
-    <section class="bg-[#230239] py-10 px-5 grid grid-cols-1 gap-4">
-      <div class="font-bold text-4xl text-white text-center">
+    <section class="bg-[#230239] py-10 px-5 grid grid-cols-1 gap-4 lg:py-5">
+      <div class="font-bold text-5xl text-white text-center my-10">
         Why Choose TechWave
       </div>
       <div
-        class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6"
+        class="grid grid-cols-1 gap-3 lg:grid-rows-3 lg:grid-cols-3 lg:mx-48 lg:mb-12"
       >
-        <img src="assets/headphone.png" />
-        <div class="text-[22px] font-bold text-white">
-          Premium Audio Quality
+        <div
+          class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6 lg:col-span-1 lg:row-span-2"
+        >
+          <img src="assets/headphone.png" />
+          <div class="text-[22px] font-bold text-white">
+            Premium Audio Quality
+          </div>
+          <div class="text-[16px] font-normal font-inter text-white opacity-60">
+            Experience crystal-clear sound with professional-grade recording
+            equipment and expert audio engineering. Every episode is mastered
+            for optimal listening across all devices and platforms.
+          </div>
         </div>
-        <div class="text-[16px] font-normal font-inter text-white opacity-60">
-          Experience crystal-clear sound with professional-grade recording
-          equipment and expert audio engineering. Every episode is mastered for
-          optimal listening across all devices and platforms.
-        </div>
-      </div>
 
-      <div
-        class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6"
-      >
-        <img src="assets/device.png" />
-        <div class="text-[22px] font-bold text-white">Mobile Friendly</div>
-        <div class="text-[16px] font-normal font-inter text-white opacity-60">
-          Listen on the go with seamless mobile experience and offline
-          downloads.
+        <div
+          class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6 lg:col-span-2 lg:row-span-1"
+        >
+          <img src="assets/device.png" />
+          <div class="text-[22px] font-bold text-white">Mobile Friendly</div>
+          <div class="text-[16px] font-normal font-inter text-white opacity-60">
+            Listen on the go with seamless mobile experience and offline
+            downloads.
+          </div>
         </div>
-      </div>
 
-      <div
-        class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6"
-      >
-        <img src="assets/location.png" />
-        <div class="text-[22px] font-bold text-white">Global Community</div>
-        <div class="text-[16px] font-normal font-inter text-white opacity-60">
-          Connect with tech enthusiasts from over 120 countries worldwide.
+        <div
+          class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6 lg:col-span-2 lg:row-span-1"
+        >
+          <img src="assets/location.png" />
+          <div class="text-[22px] font-bold text-white">Global Community</div>
+          <div class="text-[16px] font-normal font-inter text-white opacity-60">
+            Connect with tech enthusiasts from over 120 countries worldwide.
+          </div>
         </div>
-      </div>
 
-      <div
-        class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6"
-      >
-        <img src="assets/Interview.png" />
-        <div class="text-[22px] font-bold text-white">Exclusive Interviews</div>
-        <div class="text-[16px] font-normal font-inter text-white opacity-60">
-          Get unprecedented access to industry titans, startup founders, and
-          tech visionaries. Our host secures exclusive conversations you won't
-          find anywhere else, diving deep into their journeys, failures, and
-          success strategies.
+        <div
+          class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6 lg:col-span-2 lg:row-span-1"
+        >
+          <img src="assets/Interview.png" />
+          <div class="text-[22px] font-bold text-white">
+            Exclusive Interviews
+          </div>
+          <div class="text-[16px] font-normal font-inter text-white opacity-60">
+            Get unprecedented access to industry titans, startup founders, and
+            tech visionaries. Our host secures exclusive conversations you won't
+            find anywhere else, diving deep into their journeys, failures, and
+            success strategies.
+          </div>
         </div>
-      </div>
 
-      <div
-        class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6"
-      >
-        <img src="assets/resource.png" />
-        <div class="text-[22px] font-bold text-white">Rich Resources</div>
-        <div class="text-[16px] font-normal font-inter text-white opacity-60">
-          Access show notes, transcripts, and additional learning materials for
-          every episode.
+        <div
+          class="card bg-[#2e0d44] shadow-md grid grid-cols-1 gap-4 rounded-2xl p-6"
+        >
+          <img src="assets/resource.png" />
+          <div class="text-[22px] font-bold text-white">Rich Resources</div>
+          <div class="text-[16px] font-normal font-inter text-white opacity-60">
+            Access show notes, transcripts, and additional learning materials
+            for every episode.
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-[#1A0B2E] py-10 px-5 grid grid-cols-1 gap-4">
-      <div class="font-bold text-4xl text-white text-center">
+    <section class="youtube-videos bg-[#1A0B2E] py-10 px-5 grid grid-cols-1">
+      <div class="font-bold text-5xl text-white text-center">
         Featured Episodes
       </div>
       <div
-        class="videos bg-[#2e0d44] shadow-md grid grid-cols-1 gap-2 rounded-2xl"
+        class="youtube-videos grid grid-cols-1 gap-4 mt-6 lg:grid-cols-3 max-w-[1200px] mx-auto"
       >
-        <iframe
-          class="w-full h-64 rounded-t-2xl"
-          src="https://www.youtube.com/embed/lHZwlzOUOZ4?si=0LrkMKqrs9sG28dn"
-          title="YouTube video player"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <div class="text-[22px] font-bold text-white px-6">Rich Resources</div>
         <div
-          class="text-[16px] font-normal font-inter text-white opacity-60 px-6"
+          class="videos bg-[#2e0d44] shadow-md grid grid-cols-1 gap-2 rounded-2xl"
         >
-          Access show notes, transcripts, and additional learning materials for
-          every episode.
+          <iframe
+            class="w-full h-64 rounded-t-2xl"
+            src="https://www.youtube.com/embed/lHZwlzOUOZ4?si=0LrkMKqrs9sG28dn"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="text-[22px] font-bold text-white px-6">
+            Rich Resources
+          </div>
+          <div
+            class="text-[16px] font-normal font-inter text-white opacity-60 px-6"
+          >
+            Access show notes, transcripts, and additional learning materials
+            for every episode.
+          </div>
+          <div
+            class="flex items-center text-green-700 gap-1.5 font-extrabold px-6 mb-2"
+          >
+            <img src="assets/clock.png" />
+            <div>20 min</div>
+          </div>
         </div>
         <div
-          class="flex items-center text-green-700 gap-1.5 font-extrabold px-6 mb-2"
+          class="videos bg-[#2e0d44] shadow-md grid grid-cols-1 gap-2 rounded-2xl"
         >
-          <img src="assets/clock.png" />
-          <div>20 min</div>
-        </div>
-      </div>
-      <div
-        class="videos bg-[#2e0d44] shadow-md grid grid-cols-1 gap-2 rounded-2xl"
-      >
-        <iframe
-          class="w-full h-64 rounded-t-2xl"
-          src="https://www.youtube.com/embed/eqLqAMDgL5U?si=MHcTqNYK7jyT7E88"
-          title="YouTube video player"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <div class="text-[22px] font-bold text-white px-6">Rich Resources</div>
-        <div
-          class="text-[16px] font-normal font-inter text-white opacity-60 px-6"
-        >
-          Access show notes, transcripts, and additional learning materials for
-          every episode.
-        </div>
-        <div
-          class="flex items-center text-green-700 gap-1.5 font-extrabold px-6 mb-2"
-        >
-          <img src="assets/clock.png" />
-          <div>20 min</div>
-        </div>
-      </div>
-      <div
-        class="videos bg-[#2e0d44] shadow-md grid grid-cols-1 gap-2 rounded-2xl"
-      >
-        <iframe
-          class="w-full h-64 rounded-t-2xl"
-          src="https://www.youtube.com/embed/S9Jb7CZ2P-E?si=cbQazbygQMZQLqWe"
-          title="YouTube video player"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <div class="text-[22px] font-bold text-white px-6">Rich Resources</div>
-        <div
-          class="text-[16px] font-normal font-inter text-white opacity-60 px-6"
-        >
-          Access show notes, transcripts, and additional learning materials for
-          every episode.
+          <iframe
+            class="w-full h-64 rounded-t-2xl"
+            src="https://www.youtube.com/embed/eqLqAMDgL5U?si=MHcTqNYK7jyT7E88"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="text-[22px] font-bold text-white px-6">
+            Rich Resources
+          </div>
+          <div
+            class="text-[16px] font-normal font-inter text-white opacity-60 px-6"
+          >
+            Access show notes, transcripts, and additional learning materials
+            for every episode.
+          </div>
+          <div
+            class="flex items-center text-green-700 gap-1.5 font-extrabold px-6 mb-2"
+          >
+            <img src="assets/clock.png" />
+            <div>20 min</div>
+          </div>
         </div>
         <div
-          class="flex items-center text-green-700 gap-1.5 font-extrabold px-6 mb-2"
+          class="videos bg-[#2e0d44] shadow-md grid grid-cols-1 gap-2 rounded-2xl"
         >
-          <img src="assets/clock.png" />
-          <div>20 min</div>
+          <iframe
+            class="w-full h-64 rounded-t-2xl"
+            src="https://www.youtube.com/embed/S9Jb7CZ2P-E?si=cbQazbygQMZQLqWe"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="text-[22px] font-bold text-white px-6">
+            Rich Resources
+          </div>
+          <div
+            class="text-[16px] font-normal font-inter text-white opacity-60 px-6"
+          >
+            Access show notes, transcripts, and additional learning materials
+            for every episode.
+          </div>
+          <div
+            class="flex items-center text-green-700 gap-1.5 font-extrabold px-6 mb-2"
+          >
+            <img src="assets/clock.png" />
+            <div>20 min</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section
-      class="bg-[#1A0B2E] py-10 px-5 grid grid-cols-1 justify-items-center"
-    >
-      <div class="font-bold text-4xl text-white text-center mb-6">
+    <section class="bg-[#1A0B2E] py-10 px-5 flex flex-col">
+      <div class="font-bold text-5xl text-white text-center mb-6">
         Meet the Host
       </div>
 
       <div
-        class="videos bg-[#2e0d44] shadow-md grid grid-cols-1 gap-2 rounded-2xl justify-items-center p-6"
+        class="guest-card bg-[#2e0d44] shadow-md rounded-2xl p-6 flex flex-col lg:flex-row items-center gap-1.5 lg:mx-48"
       >
-        <img src="assets/host.png" />
-        <div class="text-[22px] font-bold text-white">Alex Kumar</div>
-        <div
-          class="text-[16px] font-normal font-inter text-white opacity-60 px-6 text-center"
-        >
-          Tech entrepreneur, productivity expert, and lifelong learner. Alex has
-          been in the tech industry for over 10 years, working with startups and
-          Fortune 500 companies. Through TechWave, Alex shares insights from
-          industry leaders and practical advice for anyone looking to grow in
-          tech.
+        <div class="guest-pic">
+          <img src="assets/host.png" class="w-fit h-fit" />
         </div>
-        <div class="gap-0.5 flex items-center gap-1">
+        <div class="guest-info flex flex-col items-center lg:items-start">
+          <div class="text-4xl font-bold text-white">Alex Kumar</div>
           <div
-            class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
+            class="text-xl font-normal font-inter text-white opacity-60 px-6 mt-5 text-center lg:text-left"
           >
-            <img src="assets/linkedin.png" />
+            Tech entrepreneur, productivity expert, and lifelong learner. Alex
+            has been in the tech industry for over 10 years, working with
+            startups and Fortune 500 companies. Through TechWave, Alex shares
+            insights from industry leaders and practical advice for anyone
+            looking to grow in tech.
           </div>
-          <div
-            class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
-          >
-            <img src="assets/twitter.png" />
-          </div>
-          <div
-            class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
-          >
-            <img src="assets/instagram.png" />
-          </div>
-          <div
-            class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
-          >
-            <img src="assets/youtube.png" />
+          <div class="gap-0.5 flex items-center lg:items-start mt-5">
+            <div
+              class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
+            >
+              <img src="assets/linkedin.png" />
+            </div>
+            <div
+              class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
+            >
+              <img src="assets/twitter.png" />
+            </div>
+            <div
+              class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
+            >
+              <img src="assets/instagram.png" />
+            </div>
+            <div
+              class="h-10 w-10 rounded-full border-2 border-gray-700 flex justify-around items-center"
+            >
+              <img src="assets/youtube.png" />
+            </div>
           </div>
         </div>
       </div>
@@ -344,16 +386,17 @@
     <footer
       class="h-full bg-[url('assets/footer-bg.png')] bg-cover bg-center grid grid-cols-1 gap-2.5 justify-items-center p-10"
     >
-      <div class="text-white text-3xl font-extrabold">
+      <div class="text-white text-5xl font-extrabold">
         Tech<span
           class="h-14 bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent"
           >Wave</span
         >
       </div>
+      <div class="flex flex-col items-center md:flex-row md:gap-10">
       <div
-        class="text-[16px] font-normal font-inter text-white opacity-90 flex items-center gap-2"
+        class="text-[16px] font-normal font-inter text-white opacity-90 flex items-center gap-2 md:gap-10"
       >
-        <div class="flex items-center gap-1.5">
+        <div class="flex items-center gap-1.5 ">
           <img src="assets/spotify.png" />
           Spotify
         </div>
@@ -363,7 +406,7 @@
         </div>
       </div>
       <div
-        class="text-[16px] font-normal font-inter text-white opacity-90 flex items-center gap-2"
+        class="text-[16px] font-normal font-inter text-white opacity-90 flex items-center gap-2 md:gap-10"
       >
         <div class="flex items-center gap-1.5">
           <img src="assets/youtube-podcast.png" />
@@ -374,8 +417,9 @@
           Twitter
         </div>
       </div>
+      </div>
       <div
-        class="text-[16px] text-center font-normal font-inter text-white opacity-60"
+        class="text-[16px] text-center font-normal font-inter text-white opacity-60 md:mt-4"
       >
         © 2026 TechWave Podcast. All rights reserved.
       </div>
